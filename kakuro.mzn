@@ -13,13 +13,13 @@ int: n = 7;
 array[1..n, 1..n] of var 0..9: x;
 
 %int: num_p = 24;
-int: num_hints = 5;
+%int: num_hints = 5;
 
 set of int: num_p = index_set_1of2(kakuro);
 
-%set of int: num_hints = index_set_2of2(kakuro);
+set of int: num_hints = index_set_2of2(kakuro);
 
-array[int, 1..2*num_hints+1] of int: kakuro;
+array[int, int] of int: kakuro;
 
 array[int] of 1..n: blanks;
 
@@ -31,14 +31,17 @@ constraint
         x[ blanks[2*(i-1)+1], blanks[2*(i-1)+2]] = 0
   )
   /\
+  %FIX: change 1..5 for dynamic expression as well as 11 number
   forall(p in num_p) (
-    (sum(i in 1..num_hints where kakuro[p,2*(i-1)+1] > 0) (x[  kakuro[p, 2*(i-1)+1], kakuro[p,2*(i-1)+2]  ]) = kakuro[p, 2*num_hints+1])
+    (sum(i in 1..5 where kakuro[p,2*(i-1)+1] > 0) (x[  kakuro[p, 2*(i-1)+1], kakuro[p,2*(i-1)+2]  ]) = kakuro[p, 11])
     /\
-    all_different(i in 1..num_hints where kakuro[p,2*(i-1)+1] > 0) (
+      %FIX: change 1..5 for dynamic expression
+    all_different(i in 1..5 where kakuro[p,2*(i-1)+1] > 0) (
         x[kakuro[p, 2*(i-1)+1], kakuro[p, 2*(i-1)+2]]
     )
    /\
-   forall(i in 1..num_hints where kakuro[p,2*(i-1)+1] > 0) (
+     %FIX: change 1..5 for dynamic expression
+   forall(i in 1..5 where kakuro[p,2*(i-1)+1] > 0) (
         x[kakuro[p, 2*(i-1)+1], kakuro[p, 2*(i-1)+2]] > 0
    )
   )
@@ -49,5 +52,3 @@ output [
     show(x[i,j])
   | i,j in 1..n
 ];
-
-output ["\n\n" ++ show(index_set_2of2(kakuro))];
