@@ -1,0 +1,3 @@
+l = [3,2,2,1,1,1];
+anchoRec = 5;
+altoRec = 4;
