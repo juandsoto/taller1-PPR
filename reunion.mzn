@@ -6,12 +6,16 @@ set of int: separate_half = 1..length(separate) div 2;
 set of int: distance_third = 1..length(distance) div 3;
 set of int: Persona = 1..n;
 
+% Parámetros
 array[int] of string: personas;
 array[int, 1..2] of int: next;
 array[int, 1..2] of int: separate;
 array[int, 1..3] of int: distance;
 
+% Variables
 array[Persona] of var Persona: fila;
+
+% Restricciones
 
 constraint forall(i in next_half)(
   forall(x in 1..n)(

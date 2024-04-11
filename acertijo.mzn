@@ -3,6 +3,8 @@ include "globals.mzn";
 set of int: Persona = 1..3;
 set of int: Edad = 24..26;
 
+% Variables
+
 var int: edad24 = 24;
 var int: edad25 = 25;
 var int: edad26 = 26;
@@ -16,10 +18,12 @@ var Edad: Clasica;
 var Edad: Jazz;
 var Edad: Pop;
 
-array[Persona] of var Edad: edades  = [edad24, edad25, edad26];
-array[Persona] of var Edad: nombres  = [Oscar, Dario, Juan];
+array[Persona] of var Edad: edades = [edad24, edad25, edad26];
+array[Persona] of var Edad: nombres = [Oscar, Dario, Juan];
 array[Persona] of var Edad: apellidos = [Lopez, Garcia, Gonzalez];
-array[Persona] of var Edad: musicas    = [Clasica, Jazz, Pop];
+array[Persona] of var Edad: musicas = [Clasica, Jazz, Pop];
+
+% Restricciones
 
 constraint all_different(edades) /\ all_different(nombres) /\ all_different(apellidos) /\ all_different(musicas);
   

@@ -1,5 +1,10 @@
+% Parámetros
 int: n;
+
+% Variables
 array[0..n-1] of var 0..n-1: x;
+
+% Restricciones
 
 constraint forall(i in 0..n-1) (
    x[i] = sum(j in 0..n-1)(x[j] = i));
