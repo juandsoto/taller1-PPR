@@ -1,4 +1,4 @@
 personas = ["jose","julian","diana","juan","david","claudia","edgar","mario"];
-next = [| 5, 8| 4, 6| 3, 1| 7, 1| 8, 2|];
-separate = [|6, 5| 4, 7|];
-distance = [|6, 5, 2|];
+next = [|4, 6| 8, 4| 1, 8| 3, 5|];
+separate = [|6, 5|];
+distance = [|1, 6, 3| 7, 5, 1|];
