@@ -26,7 +26,9 @@ constraint forall(row_offset, col_offset in 0..2) (
         j in (1 + 3*col_offset)..(3 + 3*col_offset)])
 );
 
-solve satisfy;
+%solve satisfy;
+
+solve :: int_search(sudoku, first_fail, indomain, complete) satisfy;
 
 output [
     if j = 9 then show(sudoku[i, j]) ++ "\n" else show(sudoku[i, j]) ++ " " endif
