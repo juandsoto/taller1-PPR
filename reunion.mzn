@@ -38,8 +38,8 @@ constraint forall(i in distance_third)(
 constraint forall(i in distance_third)(
   forall(x in 1..n)(
     if fila[x] = distance[i,1] then
-      (forall(y in x+distance[i,3]+2..n)(fila[x+1] != distance[i,2] /\ fila[y] != distance[i,2])) /\
-      (forall(y in 1..x-distance[i,3]-2)(fila[x-1] != distance[i,2] /\ fila[y] != distance[i,2]))
+      (forall(y in x+distance[i,3]+2..n)(fila[y] != distance[i,2])) /\
+      (forall(y in 1..x-distance[i,3]-2)(fila[y] != distance[i,2]))
     endif
   )
 );
