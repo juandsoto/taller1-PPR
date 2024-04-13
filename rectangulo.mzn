@@ -34,8 +34,10 @@ constraint forall(i, j in 1..n where i < j)(not solapar(i, j));
 constraint forall(i, j in 1..n where (i < j))(orden(i, j));
 
 solve satisfy;
-  
-  
+
+output ["   \(cuadrados[i])   " | i in 1..n];
+output ["\n"];
+output ["[ " ++ "\(x[i]),\(y[i])" ++ " ]" | i in 1..n];
   
   
   
