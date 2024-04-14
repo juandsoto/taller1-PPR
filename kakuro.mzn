@@ -37,8 +37,9 @@ constraint forall(p in Results) (
   )
 );
 
-solve :: int_search([x[i,j] | i,j in 1..(max(n,m)) where (i <= n /\ j <= m)],
-  first_fail, indomain_min, complete) satisfy;
+%solve :: int_search(x, smallest, indomain_min) satisfy;
+
+solve :: int_search(x, first_fail, indomain_min) satisfy;
 
 output [
   if j = 1 then "\n" else " " endif ++

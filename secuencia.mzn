@@ -14,6 +14,8 @@ constraint sum(i in 0..n-1)(x[i]) = n;
 
 constraint sum(i in 0..n-1)(x[i] * (i - 1)) = 0;
 
-solve satisfy;
+%solve :: int_search(x, input_order, indomain_min) satisfy;
+
+solve :: int_search(x, input_order, indomain_max) satisfy;
 
 output [ "\(n) = \(x)\n" ] ;

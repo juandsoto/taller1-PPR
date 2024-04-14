@@ -46,7 +46,9 @@ constraint forall(i in distance_third)(
 
 constraint all_different(fila);
 
-solve satisfy;
+%solve :: int_search(fila, input_order, indomain_min) satisfy;
+
+solve :: int_search(fila, first_fail, indomain_min) satisfy;
 
 % Otra salida
 output [ "-----------\n" ];

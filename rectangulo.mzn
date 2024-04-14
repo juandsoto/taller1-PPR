@@ -33,7 +33,9 @@ constraint forall(i, j in 1..n where i < j)(not solapar(i, j));
   
 constraint forall(i, j in 1..n where (i < j))(orden(i, j));
 
-solve satisfy;
+%solve :: int_search(x, first_fail, indomain_min) satisfy;
+
+solve :: int_search(x, first_fail, indomain_split) satisfy;
 
 output ["   \(cuadrados[i])   " | i in 1..n];
 output ["\n"];
