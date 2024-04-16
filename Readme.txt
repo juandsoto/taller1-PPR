@@ -3,7 +3,7 @@ Programación por restricciones - Taller 1
 Implementación de problemas en MiniZinc
 
 - Juan David Soto
-- Juan Sebastian Estupiñan
+- Juan Sebastián Estupiñán
 
 Universidad del Valle, Ingeniería de Sistemas - Semestre X
 
