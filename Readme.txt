@@ -1,7 +1,20 @@
-En la carpeta se encuentran los archivos .mzn de cada uno de los ejercicios. Los datos de cada uno llevan el mismo nombre pero con la extensión .dzn. 
+Programación por restricciones - Taller 1
 
-Para la secuencia mágica al ejecutar el programa se pide el valor de 'n' en un campo de texto, por eso no existe archivo de datos para este problema.
+Implementación de problemas en MiniZinc
 
-Para el acertijo lógico no existe archivo de datos debido a que el problema es puntual y no recibe parámetros.
+- Juan David Soto
+- Juan Sebastian Estupiñan
 
-En el informe se encuentran más detalles del formato de datos para cada problema.
+Universidad del Valle, Ingeniería de Sistemas - Semestre X
+
+Instrucciones:
+
+- En la carpeta se encuentran los archivos .mzn de cada uno de los ejercicios. 
+
+- Para los ejercicios 1, 2, 5 y 6, los datos de cada ejercicio llevan el mismo nombre del archivo del modelo pero terminan en _datos.dzn, por ejemplo, para sudoku.mzn los datos de prueba son sudoku_datos.dzn. 
+
+- Para el ejercicio 3, la secuencia mágica, al ejecutar el programa se pide el valor de 'n' en un campo de texto, por eso no existe archivo de datos para este problema.
+
+- Para el ejercicio 4, el acertijo lógico, no existe archivo de datos debido a que el problema es puntual y no recibe parámetros.
+
+- En el informe se encuentran más detalles del formato de datos para cada problema.
